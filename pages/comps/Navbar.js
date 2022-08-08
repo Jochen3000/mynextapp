@@ -1,12 +1,13 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
+import Image from "next/image";
 
 const Navbar = () => {
     const router = useRouter();
     return (
         <nav>
             <div className="logo">
-                <h1>List</h1>
+                <Image src='/logo.png' width={321} height={50} />
             </div>
             <div className={router.pathname == "/" ? "active" : ""}>
                 <Link href='/'><a>Home</a></Link>
